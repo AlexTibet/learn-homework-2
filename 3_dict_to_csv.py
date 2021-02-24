@@ -12,7 +12,7 @@
 import csv
 
 
-staff_list = [
+staff = [
     {
         'name': 'Anton',
         'age': '22',
@@ -44,14 +44,12 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    with open('staff_list.csv', 'w', encoding='utf-8') as file:
+    with open('staff.csv', 'w', encoding='utf-8') as file:
         fields = ['name', 'age', 'job']
 
         writer = csv.DictWriter(file, fields, delimiter=';')
         writer.writeheader()
-
-        for staff in staff_list:
-            writer.writerow(staff)
+        writer.writerows(staff)
 
 
 if __name__ == "__main__":
