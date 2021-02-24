@@ -18,8 +18,8 @@ def main():
     """
     with open('referat.txt', 'r', encoding='utf-8') as file:
         text = file.read()
-
-    print(f"Слов в тексте = {len(text.split())}")
+        count = len(text.split())
+    print(f"Слов в тексте = {count}")
 
     with open('referat2.txt', 'w', encoding='utf-8') as file:
         file.write(text.replace('.', '!'))
